@@ -3,7 +3,7 @@ import './hero.css'
 import Loader from "./heroanimation";
 const Hero = () => {
   return<>
-  <section className="w-full h-screen bg-green-200 spacer layer5 flex">
+  <section className="w-full h-screen spacer layer5 flex">
       <div className=' mt-30'>
       <Loader />
       </div>
