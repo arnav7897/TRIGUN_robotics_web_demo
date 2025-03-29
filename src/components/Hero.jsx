@@ -1,7 +1,6 @@
 import React from "react";
 import './hero.css'
 import Loader from "./heroanimation";
-import Loader2 from "./heroanimation2";
 const Hero = () => {
   return<>
   <section className="w-full h-screen bg-green-200 spacer layer5 flex">
