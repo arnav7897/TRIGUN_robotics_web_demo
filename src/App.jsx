@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Solutions from "./components/Solutions";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import Loader from "./components/heroanimation";
 function App() {
   return (
     <div className="w-full h-full">

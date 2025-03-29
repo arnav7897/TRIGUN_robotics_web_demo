@@ -1,0 +1,15 @@
+.spacer{
+    aspect-ratio: 960/300;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+  }
+  .layer5{
+    background-image: url(../assets/layered-peaks-hero.svg);
+  }
+  .upper-text{
+    color:#126656;
+  }
+  .loader{
+    align-self: center;
+  }
