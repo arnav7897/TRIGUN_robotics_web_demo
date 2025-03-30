@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Loader = () => {
   return (
@@ -20,7 +20,7 @@ const Loader = () => {
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .loading {
@@ -39,7 +39,7 @@ const StyledWrapper = styled.div`
   }
 
   .color {
-    background-color: #4285f4; /* Google Blue */
+    background-color: #261fb3; /* Google Blue */
   }
 
   .l1 {
@@ -47,7 +47,7 @@ const StyledWrapper = styled.div`
     height: 65px;
     position: absolute;
     animation: move-h 1.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
-    background-color: #f4b400; /* Google Yellow */
+    background-color: #f6dc43; /* Google Yellow */
   }
 
   .l2 {
@@ -56,7 +56,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     transform: rotate(90deg);
     animation: move-v 1.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
-    background-color: #db4437; /* Google Red */
+    background-color: #ba68c8; /* Google Red */
   }
 
   @keyframes move-h {
@@ -267,6 +267,7 @@ const StyledWrapper = styled.div`
       left: 0%;
       width: 0px;
     }
-  }`;
+  }
+`;
 
 export default Loader;
