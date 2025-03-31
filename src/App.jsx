@@ -10,11 +10,17 @@ function App() {
   return (
     <div className="w-full h-full">
       <Navbar />
-      <Hero />
-      <About />
-      <Solutions />
-      <Contact />
-      <Footer />
+      <div>
+        <Hero />
+        <About />
+      </div>
+      <div>
+        <Solutions />
+      </div>
+      <div>
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

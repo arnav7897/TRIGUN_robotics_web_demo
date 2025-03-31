@@ -20,21 +20,22 @@ const textVariants2 = {
 };
 
 const Hero = () => {
-  const first = "Collaborate Effectively,".split("");
-  const second = "and Beautifully.".split("");
+  const first = "Revolutionizing Reality ".split("");
+  const second = "with Advanced VR Solutions".split("");
   const third =
-    "Trigun provides an effective and joyful way to manage your creative projects".split(
+    "At Trigun Robotic Systems, we create immersive VR experiences".split("");
+  const fourth =
+    "that transform industries, enhance training, and redefine human interaction.".split(
       ""
     );
 
   return (
     <>
-      <section className="w-full h-screen bg-green-200 spacer layer5 flex">
-        <div className="absolute top-12 left-12 mt-30 z-0">
-          <Loader />
-        </div>
-
-        <div className="w-full items-center absolute top-24 h-3/4 flex flex-col justify-center ">
+      <div className="absolute top-12 left-12 mt-30 z-0">
+        <Loader />
+      </div>
+      <section className="w-full h-screen spacer layer5 flex items-center justify-center">
+        <div className=" mx-auto items-center absolute top-24 h-3/4 flex flex-col justify-center ">
           <motion.div
             className="upper-text text-6xl"
             initial="hidden"
@@ -66,6 +67,18 @@ const Hero = () => {
             variants={textVariants2}
           >
             {third.map((letter, index) => (
+              <motion.span key={index} variants={textVariants2}>
+                {letter}
+              </motion.span>
+            ))}
+          </motion.div>
+          <motion.div
+            className="upper-text text-3xl mt-10"
+            initial="hidden"
+            animate="visible"
+            variants={textVariants2}
+          >
+            {fourth.map((letter, index) => (
               <motion.span key={index} variants={textVariants2}>
                 {letter}
               </motion.span>
