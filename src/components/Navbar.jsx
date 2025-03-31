@@ -60,7 +60,7 @@ export const Navbar = () => {
   return (
     <Disclosure
       as="nav"
-      className={`navbar sticky top-0 z-50  ${
+      className={`navbar sticky top-0  z-999 ${
         toggle
           ? "bg-gradient-to-b from-violet-300 to-orange-100"
           : "backdrop-blur-sm"
