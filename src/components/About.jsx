@@ -1,148 +1,126 @@
-import React from "react";
-import "./about.css";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import teamData from "../data/ourteam";
+const AboutMission = () => {
+  const [scrollY, setScrollY] = useState(0);
 
-const teamMembers = [
-  {
-    name: "Elena Ramirez",
-    role: "Chief Executive Officer (CEO)",
-    image:
-      "https://static.wixstatic.com/media/c837a6_abb6c69f34ab4975983c4fef1e6576ea~mv2.jpg",
-  },
-  {
-    name: "John Doe",
-    role: "Chief Technology Officer (CTO)",
-    image:
-      "https://static.wixstatic.com/media/c837a6_abb6c69f34ab4975983c4fef1e6576ea~mv2.jpg",
-  },
-  {
-    name: "Jane Smith",
-    role: "Head of Marketing",
-    image:
-      "https://static.wixstatic.com/media/c837a6_abb6c69f34ab4975983c4fef1e6576ea~mv2.jpg",
-  },
-  {
-    name: "Michael Brown",
-    role: "Lead Developer",
-    image:
-      "https://static.wixstatic.com/media/c837a6_abb6c69f34ab4975983c4fef1e6576ea~mv2.jpg",
-  },
-  {
-    name: "Michael Brown",
-    role: "Lead Developer",
-    image:
-      "https://static.wixstatic.com/media/c837a6_abb6c69f34ab4975983c4fef1e6576ea~mv2.jpg",
-  },
-  {
-    name: "Michael Brown",
-    role: "Lead Developer",
-    image:
-      "https://static.wixstatic.com/media/c837a6_abb6c69f34ab4975983c4fef1e6576ea~mv2.jpg",
-  },
-  {
-    name: "Michael Brown",
-    role: "Lead Developer",
-    image:
-      "https://static.wixstatic.com/media/c837a6_abb6c69f34ab4975983c4fef1e6576ea~mv2.jpg",
-  },
-];
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-const About = () => {
+  const backgroundStyle = {
+    background: `linear-gradient(145deg, 
+      rgba(245, 243, 235, ${Math.min(0.5 + scrollY / 1000, 0.9)}), 
+      rgba(124, 143, 115, ${Math.min(0.25 + scrollY / 1000, 0.5)}))`,
+    transition: "background 0.3s ease-in-out",
+  };
+
+
   return (
     <>
-      {/* About Us Section */}
-      <section className="about w-full min-h-[100vh] spacer relative">
-        {/* Top SVG Divider */}
-        <div className="custom-shape-divider-top-1743265266">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
+      <section
+        className="w-full h-screen flex items-center justify-center font-poppins overflow-hidden relative px-8"
+        style={backgroundStyle}
+      >
+        {/* Animated Blobs */}
+        <motion.div
+          className="absolute w-96 h-96 bg-[#D2C0A1] rounded-full opacity-30 blur-2xl"
+          animate={{ x: [0, 50, 0], y: [0, -30, 0] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+          style={{ top: '10%', left: '5%' }}
+        />
+        <motion.div
+          className="absolute w-72 h-72 bg-[#7C8F73] rounded-full opacity-20 blur-2xl"
+          animate={{ x: [0, -40, 0], y: [0, 40, 0] }}
+          transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+          style={{ bottom: '10%', right: '5%' }}
+        />
+
+        {/* Main Content */}
+        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center z-10">
+          {/* Text Content */}
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <path
-              d="M1200 0L0 0 892.25 114.72 1200 0z"
-              className="shape-fill"
-            ></path>
-          </svg>
-        </div>
+            <h2 className="text-5xl font-bold text-[#7C8F73]">About Us</h2>
+            <p className="text-lg text-[#5F5B4D]">
+              We are a creative technology studio passionate about innovation, experience design,
+              and storytelling. Our work helps brands communicate with authenticity and impact,
+              through smart digital experiences and purposeful design.
+            </p>
 
-        {/* Top Right Text */}
-        <div className="main-text-top-left mt-40 absolute left-9 text-left z-5">
-          <div className="text-6xl">About Us</div>
-          <div className="text-3xl">
-            This is a space to share more about the business:
-            <br />
-            who's behind it, what it does, and what this site has
-            <br />
-            to offer. It’s an opportunity to tell the story behind <br />
-            the business or describe a special service or
-            <br />
-            product it offers.
-          </div>
-        </div>
+            <h3 className="text-3xl font-semibold text-[#556B4E] mt-10">Our Mission</h3>
+            <p className="text-base text-[#4F5F45]">
+              At Trigun, our mission is to connect people and ideas through modern, intuitive,
+              and emotionally-driven interfaces. We believe design is not just what it looks like,
+              but how it works — and feels. Our goal is to bridge the gap between art and tech,
+              crafting products that inspire, engage, and empower.
+            </p>
+          </motion.div>
 
-        {/* Bottom Right Text */}
-        <div className="main-text-bottom-right absolute bottom-40 right-9 text-right z-5">
-          <div className="text-6xl">OUR MISSION</div>
-          <div className="text-2xl">
-            You can use this section to share the company's history or highlight
-            a<br />
-            particular feature that sets it apart from competitors. Let the
-            writing <br />
-            speak for itself. Keep a consistent tone and voice throughout the
-            <br />
-            website to stay true to the brand image and give visitors a taste of
-            <br />
-            the company’s values and personality.
-          </div>
-        </div>
-
-        {/* Bottom SVG Divider */}
-        <div className="custom-shape-divider-bottom-1743265412">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
+          {/* SVG Illustration */}
+          <motion.div
+            className="w-full h-full flex items-center justify-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
           >
-            <path
-              d="M1200 0L0 0 892.25 114.72 1200 0z"
-              className="shape-fill"
-            ></path>
-          </svg>
+            <div className="relative w-[320px] h-[320px]">
+              <motion.div
+                className="absolute inset-0 animate-pulse"
+                animate={{ rotate: [0, 360] }}
+                transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+              >
+                <svg viewBox="0 0 200 200" className="w-full h-full">
+                  <path
+                    fill="#D2C0A1"
+                    d="M48.8,-61.5C62.4,-48.8,72.9,-31.8,72.7,-15.6C72.5,0.6,61.6,15.9,51.3,28.8C41.1,41.7,31.5,52.2,18.6,58.2C5.6,64.1,-11.7,65.4,-28.5,60.3C-45.4,55.2,-61.9,43.7,-68.5,28.1C-75.2,12.5,-71.9,-6.1,-64.1,-22.5C-56.2,-38.8,-43.9,-52.9,-29,-64.3C-14.1,-75.7,2.4,-84.3,18.6,-81.4C34.9,-78.4,49.1,-63.2,48.8,-61.5Z"
+                    transform="translate(100 100)"
+                  />
+                </svg>
+              </motion.div>
+
+              {/* Team SVG from unDraw */}
+              <img
+                src="src/assets/freepik__background__31687.png"
+                alt="Team Collaboration Illustration"
+                className="z-10 relative w-full h-full object-contain"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="our-team min-h-auto spacer relative bg-gray-100 py-40">
-        <div className="text-center text-7xl">OUR TEAM</div>
-        <div className="text-4xl text-center mt-3.5 mb-9">
-          {" "}
-          The Minds Behind TRIGUN
-        </div>
+      <section className="w-full min-h-screen bg-[#F4F1E8] py-16 px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-[#5F5B4D] mb-4">Meet Our Team</h2>
+          <p className="text-[#6C6752] mb-12 max-w-xl mx-auto">
+            A passionate group of designers, developers, and dreamers working together to build meaningful digital experiences.
+          </p>
 
-        {/* Team Members */}
-        <div className="team-flex flex flex-wrap w-full justify-evenly gap-50 mt-10">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="member w-60 h-96 bg-black flex flex-col items-center justify-center text-white rounded-lg shadow-lg"
-            >
-              <img
-                className="w-full h-3/4 object-cover rounded-t-lg"
-                src={member.image}
-                alt={member.name}
-              />
-              <div className="p-3 text-center">
-                <p className="text-2xl font-bold">{member.name}</p>
-                <p className="text-lg">{member.role}</p>
+          <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            {teamData.map((member, index) => (
+              <div key={index} className="bg-[#E6DDCC] rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
+                <img
+                  src="src/assets/creative-team-concept-illustration_114360-3894.avif"
+                  alt={member.name}
+                  className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-[#B1AE89] mb-4"
+                />
+                <h3 className="text-xl font-semibold text-[#403D30]">{member.name}</h3>
+                <p className="text-[#5A5642] text-sm mb-2">{member.role}</p>
+                <p className="text-[#6C6752] text-sm">{member.bio}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </>
   );
 };
 
-export default About;
+export default AboutMission;
