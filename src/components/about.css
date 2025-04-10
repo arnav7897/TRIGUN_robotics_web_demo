@@ -42,3 +42,32 @@
 .about{
     background-color: #F6F0E2 ;
 }
+
+.autoShow{
+    animation: autoshowAnimation;
+    animation-timeline: view(auto auto);
+}
+
+@keyframes autoshowAnimation {
+    from{
+            opacity: 0;
+            transform: translateX(-200px) scale(0.3);
+    }to{
+        opacity:1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.autoShow2{
+    animation: autoshowAnimation2;
+    animation-timeline: view(auto auto);
+}
+@keyframes autoshowAnimation2 {
+    from{
+            opacity: 0;
+            transform: translateX(200px) scale(0.3);
+    }to{
+        opacity:1;
+        transform: translateX(0) scale(1);
+    }
+}
