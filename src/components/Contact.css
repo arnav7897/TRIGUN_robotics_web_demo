@@ -1,0 +1,30 @@
+.floating {
+    
+   
+    position: relative;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+input{
+    border: 1px solid gray ;
+    border-radius: 5px;
+}
+
+textarea{
+    border: 1px solid gray ;
+    border-radius: 5px;
+}
