@@ -14,6 +14,10 @@
     height: 180px;
 }
 
+.about-section{
+    height: 100vh;
+}
+
 .custom-shape-divider-top-1743265266 .shape-fill {
     fill: #D2C0A1;
 }
@@ -71,3 +75,9 @@
         transform: translateX(0) scale(1);
     }
 }
+
+@media screen and (max-width: 600px) {
+    .about-section{
+        height: auto;
+    }
+  }
