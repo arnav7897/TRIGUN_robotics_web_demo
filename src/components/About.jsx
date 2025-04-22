@@ -21,7 +21,7 @@ const AboutMission = () => {
   return (
     <>
       <section
-        className="w-full h-screen flex items-center justify-center font-poppins overflow-hidden relative px-8"
+        className="about-section w-full flex items-center justify-center font-poppins overflow-hidden relative px-8"
         style={backgroundStyle}
       >
         {/* Animated Blobs */}
@@ -42,7 +42,7 @@ const AboutMission = () => {
         <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center z-10">
           {/* Text Content */}
           <motion.div
-            className="space-y-6"
+            className="space-y-6 pt-[50px]"
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}

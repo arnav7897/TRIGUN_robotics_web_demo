@@ -4,7 +4,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <div className="bg-[#d9d5c8]  py-8 h-fit">
-      <section className=" mx-auto p-4 pt-12 flex justify-between items-center bg-white w-[90%] h-fit border-0 rounded-3xl">
+      <section className="contact-section mx-auto p-4 pt-12 flex justify-between items-center bg-white w-[90%] h-fit border-0 rounded-3xl">
         <div className=" m-auto text-center w-50%">
           <div className="m-auto w-fit">
             <h1 className="text-5xl text-[#645a36] font-bold">CONTACT US</h1>
@@ -17,9 +17,9 @@ const Contact = () => {
             <img src={plane} className="w-[55%] floating my-15 m-auto" alt="" />
           </div>
         </div>
-        <div className="w-[50%] text-3xl">
+        <div className="form-section w-[50%] text-3xl">
           <form>
-            <div className="mb-3">
+            <div className="form-field mb-3">
               <label for="uf-imail" className="form-label">
                 Email address
               </label>
@@ -34,14 +34,14 @@ const Contact = () => {
                 We'll never share your email with anyone else.
               </div>
             </div>
-            <div clasNames="mb-3">
+            <div clasNames="form-field mb-3">
               <label for="uf-iname" className="form-label">
                 Your name
               </label>
               <br />
               <input type="text" className="form-control" id="uf-iname" />
             </div>
-            <div className="mb-3">
+            <div className="form-field mb-3">
               <label for="uf-itextarea" className="form-label">
                 Your message
               </label>
@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-fit h-fit bg-violet-500 hover:bg-violet-400 px-6 py-3 rounded-xl"
+              className="w-fit h-fit bg-violet-500 hover:bg-violet-400 px-6 py-3 rounded-xl cursor-pointer"
             >
               Send Message
             </button>

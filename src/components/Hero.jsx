@@ -35,9 +35,9 @@ const Hero = () => {
         <Loader />
       </div>
       <section className="w-full h-screen spacer layer5 flex items-center justify-center">
-        <div className=" mx-auto items-center absolute top-24 h-3/4 flex flex-col justify-center ">
+        <div className=" mx-auto items-center absolute top-24 h-3/4 flex flex-col justify-center ml-[30px] mr-[30px]">
           <motion.div
-            className="upper-text text-6xl"
+            className="upper-text text-6xl text-[#126656]"
             initial="hidden"
             animate="visible"
             variants={textVariants1}
@@ -49,7 +49,7 @@ const Hero = () => {
             ))}
           </motion.div>
           <motion.div
-            className="upper-text text-6xl"
+            className="upper-text text-6xl text-[#126656]"
             initial="hidden"
             animate="visible"
             variants={textVariants1}
@@ -61,7 +61,7 @@ const Hero = () => {
             ))}
           </motion.div>
           <motion.div
-            className="upper-text text-3xl mt-10"
+            className="lower-text text-3xl mt-10 text-[#126656]"
             initial="hidden"
             animate="visible"
             variants={textVariants2}
@@ -73,7 +73,7 @@ const Hero = () => {
             ))}
           </motion.div>
           <motion.div
-            className="upper-text text-3xl mt-10"
+            className="lower-text text-3xl mt-10 text-[#126656]"
             initial="hidden"
             animate="visible"
             variants={textVariants2}

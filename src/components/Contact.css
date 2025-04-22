@@ -28,3 +28,28 @@ textarea{
     border: 1px solid gray ;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 750px) {
+    .contact-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-section{
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    input, .form-field textarea{
+        width: 80vw;
+        padding: 5px;
+        font-size: 20px;
+    }
+    button{
+        width: 80vw;
+        height: 40px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
