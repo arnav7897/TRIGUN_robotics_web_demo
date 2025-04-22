@@ -100,7 +100,7 @@ const AboutMission = () => {
       <section id="focus-areas" className="features-wraper" style={{ padding: '1px' }}>
         <div className="features-wraper-head">
           <div className="section-heading">
-            <h2>Areas we've Worked</h2>
+            <h2>Our Operational Arenas</h2>
           </div>
         </div>
 
