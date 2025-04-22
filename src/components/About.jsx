@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import teamData from "../data/ourteam";
+import './about.css'
 const AboutMission = () => {
   const [scrollY, setScrollY] = useState(0);
 
@@ -21,7 +22,7 @@ const AboutMission = () => {
   return (
     <>
       <section
-        className="about-section w-full flex items-center justify-center font-poppins overflow-hidden relative px-8"
+        className="about-section w-full flex items-center justify-center font-poppins overflow-hidden relative px-8 pb-10"
         style={backgroundStyle}
       >
         {/* Animated Blobs */}
@@ -95,6 +96,28 @@ const AboutMission = () => {
           </motion.div>
         </div>
       </section>
+
+      <section id="focus-areas" className="features-wraper" style={{ padding: '1px' }}>
+        <div className="features-wraper-head">
+          <div className="section-heading">
+            <h2>Areas we've Worked</h2>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="row justify-center">
+            <div className="col-sm-12">
+              <img className="trigun_contribution_areas_image"
+                src="src/assets/trigun_contribution_areas.png" 
+                alt="Trigun product industries+" 
+                width="100%"
+                style={{ marginTop: '-60px' }} 
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section className="w-full min-h-screen bg-[#F4F1E8] py-16 px-8">
         <div className="max-w-7xl mx-auto text-center">

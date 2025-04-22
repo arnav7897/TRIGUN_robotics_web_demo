@@ -31,7 +31,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="absolute top-12 left-12 mt-30 z-0">
+      <div className="svg_animated absolute top-12 left-12 mt-30 z-0">
         <Loader />
       </div>
       <section className="w-full h-screen spacer layer5 flex items-center justify-center">

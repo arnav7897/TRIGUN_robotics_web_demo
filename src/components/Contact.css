@@ -40,7 +40,7 @@ textarea{
 }
 @media screen and (max-width: 600px) {
     input, .form-field textarea{
-        width: 80vw;
+        width: 70vw;
         padding: 5px;
         font-size: 20px;
     }
