@@ -53,3 +53,9 @@ textarea{
         align-items: center;
     }
 }
+
+.contactimg{
+    background-image: url("../assets/contactimg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
