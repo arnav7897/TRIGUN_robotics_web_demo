@@ -3,8 +3,8 @@ import { plane } from "../assets/assets";
 import "./Contact.css";
 const Contact = () => {
   return (
-    <section class="min-h-screen">
-      <div class="container px-6 py-10 mx-auto">
+    <section class="p-10">
+      <div class="container1 px-6 py-10 mx-auto">
         <div class="lg:flex lg:items-center lg:-mx-10">
           <div class="lg:w-1/2 lg:mx-10">
             <h1 class="text-2xl font-semibold text-gray-800 capitalize dark:text-black lg:text-3xl">
@@ -24,7 +24,7 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="John Doe"
-                    class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-600 rounded-md dark:placeholder-gray-600 dark:bg-lime-200 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-600 rounded-md dark:placeholder-gray-600 dark:text-gray-800 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
 
@@ -35,7 +35,7 @@ const Contact = () => {
                   <input
                     type="email"
                     placeholder="johndoe@example.com"
-                    class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-600 rounded-md dark:placeholder-gray-600 dark:bg-lime-200 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-600 rounded-md dark:placeholder-gray-600 dark:text-gray-800 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
               </div>
@@ -45,7 +45,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-600 rounded-md md:h-56 dark:placeholder-gray-600 dark:bg-lime-200 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                  class="block w-full h-32 px-5 py-3 mt-2 text-gray-800 placeholder-gray-400 bg-white border border-gray-600 rounded-md md:h-56 dark:placeholder-gray-600 dark:text-gray-800 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   placeholder="Message"
                 ></textarea>
               </div>

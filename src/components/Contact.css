@@ -4,6 +4,11 @@
     position: relative;
     animation: float 2s ease-in-out infinite;
 }
+.container1{
+    padding: 50px;
+    border-radius: 10px;
+    background: #efd4bd;
+}
 
 @keyframes float {
     0% {
